@@ -7,8 +7,9 @@ import { Provider } from 'react-redux'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 
 import ChatSlice from './redux/ChatSlice'
+import UserSlice from './redux/UserSlice'
 
-let rootReducer = combineReducers({ ChatSlice });
+let rootReducer = combineReducers({ ChatSlice, UserSlice });
 
 let store = configureStore({
   reducer : rootReducer

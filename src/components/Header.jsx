@@ -1,8 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 
 const Header = () => {
+  let user = useSelector(state=>state.UserSlice);
+
   return (
     <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
   <div className="container">
@@ -20,6 +23,9 @@ const Header = () => {
         </li>
         <li className="nav-item">
           <NavLink className="nav-link" to="/user2">User2</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/user">User ({user.length})</NavLink>
         </li>
         
        
